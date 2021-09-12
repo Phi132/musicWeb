@@ -1,0 +1,125 @@
+<div class="row">
+
+</div>
+<div class="footer">
+    <div class="play__music">
+        <div class="col-md-3 player-left">
+            <div class="player-controll-left">
+                <div class="avt-song">
+                </div>
+
+                <div class="name-singer-song">
+                    <div class="name-song">
+                        <marquee width="100%" behavior="scroll"></marquee>
+                    </div>
+                    <div class="name-singer">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="like-list">
+                    <div class="icon-heart">
+                        <a href="#" class="link-heart-list">
+                            <i class="fas fa-heart"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="more-song-left">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="player-controll-bar">
+                <div class="control">
+                    <div class="btn btn-repeat">
+                        <i class="fas fa-redo"></i>
+                    </div>
+                    <div class="btn btn-prev">
+                        <div class="btn-prev-song">
+                            <i class="fas fa-step-backward"></i>
+
+                        </div>
+                    </div>
+                    <div class="btn btn-toggle-play">
+                        <i class="fas fa-pause icon-pause"></i>
+                        <i class="fas fa-play icon-play"></i>
+                    </div>
+                    <div class="btn btn-next">
+                        <div class="btn-next-song">
+                            <i class="fas fa-step-forward"></i>
+
+                        </div>
+                    </div>
+                    <div class="btn btn-random">
+                        <div class="btn-random-song">
+                            <i class="fas fa-random"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="music-progress">
+                    <div class="time-left-song">
+
+                    </div>
+                    <div class="item-progress">
+                        <input id="progress" class="progress-input" type="range" value="0" step="1" min="0" max="100">
+                        <div id="progress-bs4" class="progress">
+                            <div class="progress-bar" id="progress-bar" role="progressbar" style="width: 0%;transition: width 0s ease;text-align: right;
+                        position:relative;border-radius: .25rem;" aria-valuenow="25" aria-valuemin="0"
+                                aria-valuemax="100">
+                                <i class="fas fa-circle" id="circle-progress"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="time-right-song">
+                        {{!-- 05:05 --}}
+                    </div>
+                </div>
+                <audio id="audio" src=""></audio>
+            </div>
+
+            <!-- Playlist -->
+            {{!-- <div class="playlist">
+            </div> --}}
+        </div>
+    </div>
+    <div class="">
+        <div class="player-controll-right">
+            <div class="mv-right" data-toggle="tooltip" data-placement="top" title="MV">
+                <i class="fas fa-tv"></i>
+            </div>
+            <div class="lyric-right" data-toggle="tooltip" data-placement="top" title="Lời Bài Hát">
+                <i class="fas fa-microphone"></i>
+            </div>
+            <div class="volume-right">
+                <div class="volume-icon">
+                    <i class="fas fa-volume-down volumeIcon"></i>
+                    
+                </div>
+                <div class="volume-progress">
+                    <div class="music-progress">
+                        <div class="item-progress">
+                            <input id="progress_volume" class="progress-input_volume" type="range" value="0" step="1" min="0"
+                                max="100">
+                            <div id="progress-bs4_volume" class="progress_volume">
+                                <div class="progress-bar_volume" id="progress-bar_volume" role="progressbar" style="width: 0%;transition: width 0s ease;text-align: right;
+                        position:relative;border-radius: .25rem;" aria-valuenow="25" aria-valuemin="0"
+                                    aria-valuemax="100">
+                                    <i class="fas fa-circle" id="circle-progress_volume"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="devide-nav">
+                <span class="devide"></span>
+            </div>
+            <div class="playlist-right-song" data-toggle="tooltip" data-placement="top" title="Playlist">
+                <i class="fas fa-list-ul"></i>
+            </div>
+        </div>
+
+    </div>
+</div>

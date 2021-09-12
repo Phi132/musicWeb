@@ -1,0 +1,167 @@
+<div class="music_user">
+    <div style="
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100%;">
+        <div style="
+        position: absolute;
+        inset: 0;
+        overflow: hidden scroll;
+        margin-right: -6px;
+        margin-bottom: 0px;
+        right: 0;">
+            <div class="user_profile_header">
+                <div class="profile_container">
+                    <div class="profile_cnt_avt">
+                        <img src="https://s120-ava-talk.zadn.vn/7/4/3/5/61/120/162864bc3fb9fea846983427858d3dd1.jpg"
+                            class="avt_profile" alt="avt Profile">
+                    </div>
+                    <div class="profile_cnt_name">
+                        <h3>Thành Phi</h3>
+                    </div>
+                    <div class="profile_cnt_actions">
+                        <div class="buy-vip-action">
+                            mua vip ngay
+                        </div>
+                        <div class="receive-vip">
+                            nhap code vip
+                        </div>
+                        <div class="log-out" data-toggle="tooltip" data-placement="top" title="Đăng Xuất">
+                            <i class="fas fa-sign-out-alt"></i>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <nav class="user_profile_navbar">
+                <div class="profile_navbar_music">
+                    <div class="navbar_menu">
+                        <li class="pro_nav_menu_item">
+                            <div class="nav_item">
+
+                                <a href="/mymusic/">
+                                    <div class="nav_item-link">
+                                        tổng quan
+                                    </div>
+                                </a>
+
+
+                            </div>
+                        </li>
+                        <li class="pro_nav_menu_item active">
+                            <div class="nav_item">
+                                <a href="/mymusic/libary/song">
+                                    <div class="nav_item-link">
+                                        bài hát
+                                    </div>
+                                </a>
+
+                            </div>
+                        </li>
+                        <li class="pro_nav_menu_item">
+                            <div class="nav_item">
+                                <div class="nav_item-link">
+                                    playlist
+                                </div>
+                            </div>
+                        </li>
+                        <li class="pro_nav_menu_item">
+                            <div class="nav_item">
+                                <div class="nav_item-link">
+                                    nghệ sĩ
+                                </div>
+                            </div>
+                        </li>
+                        <li class="pro_nav_menu_item">
+                            <div class="nav_item">
+                                <div class="nav_item-link">
+                                    album
+                                </div>
+                            </div>
+                        </li>
+                        <li class="pro_nav_menu_item">
+                            <div class="nav_item">
+                                <div class="nav_item-link">
+                                    mv
+                                </div>
+                            </div>
+                        </li>
+                        <li class="pro_nav_menu_item">
+                            <div class="nav_item">
+                                <div class="nav_item-link">
+                                    tải lên
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </nav>
+            <div class="container" style="padding: 0 60px;">
+                <div class="song-list-header">
+                    <div class="list-title">
+                        <span>Bài Hát</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                    <div class="list-header-options">
+                        <div class="header-option-upload">
+                            <input type="file" name="option-upload" id="option-upload" style="display: none;">
+                            <label for="option-upload">
+                                <div class="option-upload">
+                                    <a class="btn-option-link" tabindex="0">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                    </a>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="option-play-all">
+                            <div class="play-all">
+                                <i class="fas fa-play"></i>
+                                <span>Phát Tất Cả</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="song-animate-section">
+
+                    <div class="song-playlist" style="width: 100%; min-height: 300px;">
+                        <div style="position: relative; overflow: hidden; width: 100%; height: 100%;">
+                            <div
+                                style="position: absolute; inset: 0px; overflow: hidden scroll; margin-right: -6px; margin-bottom: 0px;">
+                                <div class="list-border">
+                                    <div class="playlist-song">
+                                        <div class="playlist" style="max-height: unset;">
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+<script>
+    const getItemNavMenu = document.querySelectorAll('.pro_nav_menu_item');
+    var imgAnimate = document.getElementsByClassName('song-img-item');
+    var indexFirst = 0;
+    var prevFirst = -1;
+
+    var imgFirst = document.querySelector('.song-img-item.first');
+    getItemNavMenu.forEach((item, index) => {
+        item.onclick = () => {
+            document.querySelector('.pro_nav_menu_item.active').classList.remove('active')
+            item.classList.add('active')
+        }
+
+    })
+    // cho img chạy từ first đến third
+
+</script>
