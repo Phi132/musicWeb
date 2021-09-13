@@ -6,9 +6,10 @@ class MusicController {
         res.render('libarySong')
     }
     //[GET]/mymusic
-    mymusic(req, res) {
+    mymusic(req, res, next) {
         collecMusic.find({}).lean()
             .then(music => res.render('mymusic', {music}))
+            .catch(next)
         
     }
 
