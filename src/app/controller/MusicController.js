@@ -8,7 +8,7 @@ class MusicController {
     //[GET]/mymusic
     mymusic(req, res, next) {
         collecMusic.find({}).lean()
-            .then(music => res.json({music}))
+            .then(music => res.json(music))
             .catch(next)
         
     }
