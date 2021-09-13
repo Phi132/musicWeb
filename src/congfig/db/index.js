@@ -2,7 +2,8 @@ const mongoose = require('mongoose')
 
 async function connect () {
     try {
-        await mongoose.connect('mongodb://localhost:27017/musicWeb', {
+        const uri = process.env.MONGODB_URI;
+        await mongoose.connect(uri, {
             UseNewUrlParser: true,
             UseUnifiedTopology: true
         });
