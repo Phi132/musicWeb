@@ -65,9 +65,9 @@ $(document).ready(function () {
 var imgAnimate = document.getElementsByClassName('song-img-item');
 var indexFirst = 0;
 var prevFirst = -1;
-const getItemNavMenu = document.querySelectorAll('.pro_nav_menu_item');
+//const getItemNavMenu = document.querySelectorAll('.pro_nav_menu_item');
 var imgFirst = document.querySelector('.song-img-item.first');
-getItemNavMenu.forEach((item, index) => {
+document.querySelectorAll('.pro_nav_menu_item').forEach((item, index) => {
     item.onclick = () => {
         document.querySelector('.pro_nav_menu_item.active').classList.remove('active')
         item.classList.add('active')
@@ -450,7 +450,7 @@ const app = {
         };
         //đã xóa cần sửa
         // volume ban đầu
-        //audio.volume = app.theVolume
+        audio.volume = app.theVolume
         progressBarVolume.style.width = `50%`
         // volume sau khi click vào thay đổi
         progressVolume.oninput = (e) => {
@@ -525,7 +525,7 @@ const app = {
         this.isRepeat = this.config.isRepeat;
         this.currentIndex = this.config.indexStore;
         //đã xóa cần sửa
-        //audio.currentTime = this.config.currentTime;
+        audio.currentTime = this.config.currentTime;
         this.theVolume = this.config.theVolume;
     },
     start: function () {
