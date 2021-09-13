@@ -232,7 +232,7 @@ const app = {
     },
     //đã xóa cần sửa
     loadCurrentSong: function () {
-        avt_song.style.backgroundImage = `url('${this.currentSong.image}')`
+        //avt_song.style.backgroundImage = `url('${this.currentSong.image}')`
         nameSong.textContent = this.currentSong.name;
         nameSinger.textContent = this.currentSong.singer;
         audio.src = this.currentSong.path;
