@@ -101,6 +101,7 @@ const demoThemeBlack = document.querySelector('.option--demo--black')
 
 const app = {
     currentIndex: 0,
+    indexStore: 0,
     isPlaying: false,
     isRandom: false,
     isRepeat: false,
