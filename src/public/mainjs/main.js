@@ -65,7 +65,7 @@ $(document).ready(function () {
 var imgAnimate = document.getElementsByClassName('song-img-item');
 var indexFirst = 0;
 var prevFirst = -1;
-
+const getItemNavMenu = document.querySelectorAll('.pro_nav_menu_item');
 var imgFirst = document.querySelector('.song-img-item.first');
 getItemNavMenu.forEach((item, index) => {
     item.onclick = () => {
