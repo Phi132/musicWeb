@@ -149,20 +149,40 @@
                         </li>
                         <li class="song-img-item  third">
                             <figure class="img-figure">
-                                <img src="https://photo-resize-zmp3.zadn.vn/w320_r1x1_jpeg/cover/0/6/0/4/0604b2039e6be2b7c8d4f3243b24594d.jpg" alt="">
+                                <img src="https://photo-resize-zmp3.zadn.vn/w320_r1x1_jpeg/cover/0/6/0/4/0604b2039e6be2b7c8d4f3243b24594d.jpg"
+                                    alt="">
                             </figure>
                         </li>
-                        
+
                     </ul>
+
                     <div class="song-playlist">
                         <div style="position: relative; overflow: hidden; width: 100%; height: 100%;">
                             <div
                                 style="position: absolute; inset: 0px; overflow: hidden scroll; margin-right: -6px; margin-bottom: 0px;">
                                 <div class="list-border">
                                     <div class="playlist-song">
-                                        <div class="playlist">
 
+                                        <div class="playlist">
+                                            {{#each music}}
+                                            <div class="song " data-index="{{@index}}">
+                                                <div class="thumb" style="background-image: url('{{this.image}}')">
+                                                </div>
+                                                <div class="body">
+                                                    <div class="name">
+                                                        <div class="title">{{this.name}}</div>
+                                                        <div class="author">{{this.singer}}</div>
+                                                    </div>
+                                                    <div class="timeSong">{{this.timeSong}}</div>
+                                                </div>
+                                                <div class="option">
+                                                    <i class="fas fa-ellipsis-h"></i>
+                                                </div>
+                                            </div>
+                                            {{/each}}
                                         </div>
+
+
 
                                     </div>
                                 </div>
@@ -171,6 +191,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 
@@ -229,7 +250,6 @@
 
 
     }, 2000)
-
 
 
 </script>

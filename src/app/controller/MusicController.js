@@ -1,4 +1,4 @@
-
+const collecMusic = require('../model/collectionMusic')
 
 class MusicController {
     //[GET] /mymusic/libary/song
@@ -7,7 +7,9 @@ class MusicController {
     }
     //[GET]/mymusic
     mymusic(req, res) {
-        res.render('mymusic')
+        collecMusic.find({}).lean()
+            .then(music => res.render('mymusic', {music}))
+        
     }
 
 }

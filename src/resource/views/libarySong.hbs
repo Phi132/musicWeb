@@ -148,20 +148,3 @@
 
 
 </div>
-<script>
-    const getItemNavMenu = document.querySelectorAll('.pro_nav_menu_item');
-    var imgAnimate = document.getElementsByClassName('song-img-item');
-    var indexFirst = 0;
-    var prevFirst = -1;
-
-    var imgFirst = document.querySelector('.song-img-item.first');
-    getItemNavMenu.forEach((item, index) => {
-        item.onclick = () => {
-            document.querySelector('.pro_nav_menu_item.active').classList.remove('active')
-            item.classList.add('active')
-        }
-
-    })
-    // cho img chạy từ first đến third
-
-</script>

@@ -2559,7 +2559,6 @@
 
 </div>
 <script>
-    // animation của gallery item
     const galleryItem = document.getElementsByClassName('gallery-item')
     var itemFirst = -1;
     var removeFirst = -2;
@@ -2649,7 +2648,7 @@
         else {
             removeLast += 1;
         }
-        
+
         //Add
         if (itemAdd === 5) {
             itemAdd = 0;
@@ -2670,6 +2669,7 @@
         console.log('add,',itemAdd, removeAdd)*/
 
         //first
+        console.log(removeFirst)
         galleryItem[removeFirst].classList.remove('gallery-item-first');
         galleryItem[itemFirst].classList.add('gallery-item-first');
         //previous
@@ -2689,5 +2689,4 @@
         galleryItem[itemAdd].classList.add('gallery-item-add');
 
     }, 3000)
-
 </script>

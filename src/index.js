@@ -4,7 +4,11 @@ const port = 3000
 const route = require('./routes')
 const path = require('path')
 const handlebars = require('express-handlebars');
+const db = require('./congfig/db/index')
 
+//connect mongodb
+db.connect();
+//
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.engine('hbs', handlebars({
@@ -18,6 +22,6 @@ app.set('views', path.join(__dirname, 'resource/views'));
 
 route(app);
 
-app.listen(process.env.PORT, () => {
+app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
