@@ -358,7 +358,7 @@ const app = {
             } else {
                 audio.play();
                 turnAroundAvt.play();
-                
+
 
             }
         };
@@ -530,28 +530,61 @@ const app = {
         this.theVolume = this.config.theVolume;
     },
     start: function () {
-        // tải lại những cái đã lưu trong local Storage
-        this.loadConfig();
-        // thay đổi giao diện
-        this.changeTheme();
-        //định nghĩa các thuộc tính
-        this.defineProperties();
-        //xử lí xử kiện cho music
-        this.handleEvents();
-        //
-        this.loadCurrentSong();
-        // time play
-        //this.timePlay();
-        //render lại danh sách bài hát
-        this.render();
-        btnRandomSong.classList.toggle('active', app.isRandom);
-        btnLoopSong.classList.toggle('active', app.isRepeat);
-        arrowRetreat.classList.toggle('active-trans-page', app.isClickBack)
-        arrowAdvance.classList.toggle('active-trans-page', app.isClickNext)
+        if (app.config.indexStore) {
+            // tải lại những cái đã lưu trong local Storage
+            this.loadConfig();
 
-        //volume
-        progressBarVolume.style.width = `${app.theVolume * 100}%`
-        
+            // thay đổi giao diện
+            this.changeTheme();
+            //định nghĩa các thuộc tính
+            this.defineProperties();
+            //xử lí xử kiện cho music
+            this.handleEvents();
+            //
+            this.loadCurrentSong();
+            // time play
+            //this.timePlay();
+            //render lại danh sách bài hát
+            this.render();
+            btnRandomSong.classList.toggle('active', app.isRandom);
+            btnLoopSong.classList.toggle('active', app.isRepeat);
+            arrowRetreat.classList.toggle('active-trans-page', app.isClickBack);
+            arrowAdvance.classList.toggle('active-trans-page', app.isClickNext);
+
+            //volume
+            progressBarVolume.style.width = `${app.theVolume * 100}%`
+        }
+        else {
+            app.setConfig('indexStore', 0);
+            app.setConfig('currentTime', 0);
+            app.setConfig('isPlaying', false);
+            app.setConfig('isRandom', false);
+            app.setConfig('isRepeat', false);
+            app.setConfig('theVolume', 0.5);
+
+            this.loadConfig();
+            // thay đổi giao diện
+            this.changeTheme();
+            //định nghĩa các thuộc tính
+            this.defineProperties();
+            //xử lí xử kiện cho music
+            this.handleEvents();
+            //
+            this.loadCurrentSong();
+            // time play
+            //this.timePlay();
+            //render lại danh sách bài hát
+            this.render();
+            btnRandomSong.classList.toggle('active', app.isRandom);
+            btnLoopSong.classList.toggle('active', app.isRepeat);
+            arrowRetreat.classList.toggle('active-trans-page', app.isClickBack);
+            arrowAdvance.classList.toggle('active-trans-page', app.isClickNext);
+
+            //volume
+            progressBarVolume.style.width = `${app.theVolume * 100}%`
+        }
+
+
     }
 }
 app.start();
