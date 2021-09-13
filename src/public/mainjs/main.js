@@ -450,7 +450,7 @@ const app = {
         };
         //đã xóa cần sửa
         // volume ban đầu
-        audio.volume = app.theVolume
+        //audio.volume = app.theVolume
         progressBarVolume.style.width = `50%`
         // volume sau khi click vào thay đổi
         progressVolume.oninput = (e) => {
