@@ -525,7 +525,7 @@ const app = {
         this.isRepeat = this.config.isRepeat;
         this.currentIndex = this.config.indexStore;
         //đã xóa cần sửa
-        audio.currentTime = this.config.currentTime;
+        //audio.currentTime = this.config.currentTime;
         this.theVolume = this.config.theVolume;
     },
     start: function () {
