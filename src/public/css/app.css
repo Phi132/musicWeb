@@ -313,7 +313,8 @@
 .mucsicWeb {
   position: relative;
   background-color: var(--layout-bg);
-  background-size: 1920px auto; }
+  background-size: 1920px auto;
+  background-image: url(var(--bg-img)); }
 
 .sidebar {
   position: fixed;
