@@ -96,8 +96,12 @@ const btnPrevSong = document.querySelector('.btn-prev-song');
 const btnNextSong = document.querySelector('.btn-next-song');
 const btnRandomSong = document.querySelector('.btn-random');
 const btnLoopSong = document.querySelector('.btn-repeat');
+const optionAcceptBlue = document.querySelector('.option--accept--blue');
+const demoThemeBlue = document.querySelector('.option--demo--blue');
 const optionAcceptBlack = document.querySelector('.option--accept--black');
-const demoThemeBlack = document.querySelector('.option--demo--black')
+const demoThemeBlack = document.querySelector('.option--demo--black');
+const optionAcceptRed = document.querySelector('.option--accept--red');
+const demoThemeRed = document.querySelector('.option--demo--red');
 
 const app = {
     currentIndex: 0,
