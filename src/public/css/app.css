@@ -313,8 +313,7 @@
 .mucsicWeb {
   position: relative;
   background-color: var(--layout-bg);
-  background-size: 1920px auto;
-  background-image: url("https://zmp3-static.zadn.vn/skins/zmp3-v6.1/images/theme-background/rose.jpg"); }
+  background-size: 1920px auto; }
 
 .sidebar {
   position: fixed;
