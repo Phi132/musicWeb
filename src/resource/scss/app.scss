@@ -1,19 +1,4 @@
 :root {
-    --primary-bg: #883236;
-    --layout-bg: #731717;
-    --sidebar-bg: #7a2323;
-    --sidebar-popup-bg: #7a2922;
-    --alpha-layout-bg: rgba(115, 23, 23, 0.8);
-    --queue-player-popup-bg: #561111;
-    --blur-queue-bg: rgba(115, 23, 23, 0.9019607843137255);
-    --purple-primary: #aa1c1c;
-    --link-text-hover: #f36565;
-    --chart-bg-img-alpha: rgba(115, 23, 23, 0.9);
-    --linear-gradient-bg: linear-gradient(180deg, #941c1c, #961919);
-    --player-bg: rgba(0, 0, 0, 0.2);
-    --border-player: hsla(0, 0%, 100%, 0.1);
-}
-[data-theme="black"] {
     --primary-bg: #282828;
     --layout-bg: #1e1e1e;
     --sidebar-bg: hsla(0, 0%, 100%, 0.05);
@@ -60,11 +45,27 @@
     --portal-menu-box-shadow: rgba(0, 0, 0, 0.7);
     --main-text-stroke: #fff;
 }
+[data-theme="red"] {
+    --primary-bg: #883236;
+    --layout-bg: #731717;
+    --sidebar-bg: #7a2323;
+    --sidebar-popup-bg: #7a2922;
+    --alpha-layout-bg: rgba(115, 23, 23, 0.8);
+    --queue-player-popup-bg: #561111;
+    --blur-queue-bg: rgba(115, 23, 23, 0.9019607843137255);
+    --purple-primary: #aa1c1c;
+    --link-text-hover: #f36565;
+    --chart-bg-img-alpha: rgba(115, 23, 23, 0.9);
+    --linear-gradient-bg: linear-gradient(180deg, #941c1c, #961919);
+    --player-bg: rgba(0, 0, 0, 0.2);
+    --border-player: hsla(0, 0%, 100%, 0.1);
+}
 [data-theme="blue"] {
     --primary-bg: #192f60;
     --layout-bg: #101f3f;
     --sidebar-bg: hsla(0, 0%, 100%, 0.05);
-    --bg-img: 'https://zmp3-static.zadn.vn/skins/zmp3-v6.1/images/theme-background/rose.jpg';
+    
+    --bg-img: "https://zmp3-static.zadn.vn/skins/zmp3-v6.1/images/theme-background/rose.jpg";
     --sidebar-popup-bg: #1d2a49;
     --alpha-layout-bg: rgba(16, 31, 63, 0.8);
     --queue-player-popup-bg: #223c75;
@@ -73,7 +74,6 @@
     --linear-gradient-bg: linear-gradient(180deg, #1b2f5a, #182e5d);
     --purple-primary: #3460f5;
     --link-text-hover: #6e8ffb;
-
 }
 //owl
 /**
@@ -767,21 +767,21 @@ button:focus {
     width: 100%;
     flex-wrap: wrap;
 }
-.item__option {
+.theme-option {
     padding: 0 7px;
 }
-.item__option--image_blue {
+.theme-option-picture {
     position: relative;
     overflow: hidden;
 }
 
-.item__option--image_blue:hover img,
-.item__option--image_blue:hover .overlay__option {
+.theme-option-picture:hover img,
+.theme-option-picture:hover .theme-overlay-option {
     display: block;
     transform: scale(1.1, 1.1);
     transition: all 0.2s linear;
 }
-.overlay__option {
+.theme-overlay-option {
     position: absolute;
     top: 0;
     z-index: 100;
@@ -791,10 +791,10 @@ button:focus {
     display: none;
     transition: all 0.2s linear;
 }
-.option--accept--black:hover {
+.theme-accept:hover {
     cursor: pointer;
 }
-.option--accept--black {
+.theme-accept {
     margin-top: 14px;
     margin-left: 10px;
     text-align: center;
@@ -807,7 +807,7 @@ button:focus {
 
     font-size: 12px;
 }
-.option--demo--black {
+.theme-demo {
     margin-top: 10px;
     margin-left: 10px;
     text-align: center;
@@ -819,19 +819,19 @@ button:focus {
     cursor: pointer;
     font-size: 12px;
 }
-.item__option--image_blue figure {
+.theme-option-picture figure {
     
 }
-.item__option--image_blue img {
+.theme-option-picture img {
     height: 85px;
     width: 125px;
     border-radius: 5px;
     overflow: hidden;
 }
-.item__option--image_blue.active {
+.theme-option-picture.active {
     border: 1px solid white;
 }
-.item__option--name {
+.theme-name {
     color: white;
     margin-bottom: 10px;
 }

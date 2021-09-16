@@ -499,7 +499,8 @@ const app = {
     //thay đổi giao diện
     changeTheme: function () {
         var isClickCloseTheme = false;
-        optionAcceptBlack.onclick = () => {
+        //blue
+        optionAcceptBlue.onclick = () => {
 
             document.querySelector('.overlay__theme').style.display = 'none'
             // chưa lưu vô local storage
@@ -508,7 +509,7 @@ const app = {
             document.querySelector('.mucsicWeb').style.backgroundImage = 'url(\'https://zmp3-static.zadn.vn/skins/zmp3-v6.1/images/theme-background/rose.jpg\')'
 
         }
-        demoThemeBlack.onclick = () => {
+        demoThemeBlue.onclick = () => {
             document.documentElement.dataset.theme = 'blue'
             isClickCloseTheme = true;
             document.querySelector('.close--theme').onclick = () => {
@@ -517,6 +518,46 @@ const app = {
 
             }
         }
+
+        //black
+        optionAcceptBlack.onclick = () => {
+
+            document.querySelector('.overlay__theme').style.display = 'none'
+            // chưa lưu vô local storage
+            document.documentElement.dataset.theme = 'black'
+            document.querySelector('.item__option--image_black').classList.add('active')
+            document.querySelector('.mucsicWeb').removeAttribute("style")
+
+        }
+        demoThemeBlack.onclick = () => {
+            document.documentElement.dataset.theme = 'black'
+            isClickCloseTheme = true;
+            document.querySelector('.close--theme').onclick = () => {
+                if (isClickCloseTheme)
+                    document.documentElement.dataset.theme = ''
+
+            }
+        }
+        //red
+        optionAcceptRed.onclick = () => {
+
+            document.querySelector('.overlay__theme').style.display = 'none'
+            // chưa lưu vô local storage
+            document.documentElement.dataset.theme = 'red'
+            document.querySelector('.item__option--image_red').classList.add('active')
+            document.querySelector('.mucsicWeb').removeAttribute("style")
+
+        }
+        demoThemeRed.onclick = () => {
+            document.documentElement.dataset.theme = 'red'
+            isClickCloseTheme = true;
+            document.querySelector('.close--theme').onclick = () => {
+                if (isClickCloseTheme)
+                    document.documentElement.dataset.theme = ''
+
+            }
+        }
+
 
     },
     loadConfig: function () {
